@@ -19,6 +19,10 @@ iconBackpack.addEventListener('click', () => {
     };
 });
 
+hpPotion.addEventListener('click', () => {
+    hpPotion.classList.add('potion-consumed');
+})
+
 
 
 // spells script
