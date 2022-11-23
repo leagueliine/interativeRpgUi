@@ -1,7 +1,11 @@
 let iconBackpack = document.getElementById('iconBackpack');
 let inventario = document.getElementById('divBackpack');
 let hpPotion = document.getElementById('hpPotion');
+let superMana = document.getElementById('superManaPotion');
+let superHp = document.getElementById('superHpPotion');
+let manaPotion = document.getElementById('manaPotion');
 let hpBar = document.getElementById('hpBar');
+let manaBar = document.getElementById('manaBar');
 let spellPassosNoturnos = document.getElementById('passosNoturnos');
 let char = document.getElementById('char');
 let iconSpells = document.getElementById('iconSpells');
@@ -20,8 +24,26 @@ iconBackpack.addEventListener('click', () => {
 });
 
 hpPotion.addEventListener('click', () => {
+    hpBar.value += 20;
     hpPotion.classList.add('potion-consumed');
-})
+});
+
+manaPotion.addEventListener('click', () => {
+    manaBar.value += 20;
+    manaPotion.classList.add('potion-consumed');
+});
+
+superHp.addEventListener('click', () => {
+    hpBar.value += 45;
+
+    superHp.classList.add('potion-consumed');
+});
+
+superMana.addEventListener('click', () => {
+    manaBar.value += 45;
+    superMana.classList.add('potion-consumed');
+}); 
+
 
 
 
@@ -42,7 +64,7 @@ spellPassosNoturnos.addEventListener('click', () => {
     };
 });
 
-// atrubuto script
+// levels script
 iconLevels.addEventListener('click', () => {
     if(levels.classList.length > 1){
         levels.classList.remove('open')
@@ -50,6 +72,4 @@ iconLevels.addEventListener('click', () => {
         levels.classList.add('open');
     };
 });
-
-
 

@@ -138,24 +138,65 @@ body {
 .card .status-div {
     display: inline-block;
     position: relative;
-    top: 231px;
+    top: 206px;
     left: 40px;
 }
 
 .card .status-div .hp {
+    position: relative;
+    appearance: none;
     width: 226px;
     height: 28px;
+    padding-bottom: 10px;
+    top: 31px;
+    left: 1px;
 }
 
+.card .status-div .hp::-webkit-progress-value {
+    background-image:
+        -webkit-linear-gradient(-45deg,
+            transparent 33%, rgba(0, 0, 0, .1) 33%,
+            rgba(0, 0, 0, .1) 66%, transparent 66%),
+        -webkit-linear-gradient(top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .25)),
+        -webkit-linear-gradient(left, #f44, #f22);
+
+    border-radius: 25px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+
+}
+
+
 .card .status-div .mp {
+    position: absolute;
+    appearance: initial;
     width: 226px;
     height: 28px;
+    padding-bottom: 10px;
+    top: 60px;
+    left: 1px;
 }
+
+.card .status-div .mp::-webkit-progress-value {
+    background-image:
+        -webkit-linear-gradient(-45deg,
+            transparent 33%, rgba(0, 0, 0, .1) 33%,
+            rgba(0, 0, 0, .1) 66%, transparent 66%),
+        -webkit-linear-gradient(top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .25)),
+        -webkit-linear-gradient(left, #4040ff, #0000cc);
+
+    border-radius: 25px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
 
 .card .nome-status-div {
     color: white;
     position: relative;
-    top: 181px;
+    top: 210px;
     left: 6px;
     font-size: 10px;
 }
@@ -201,15 +242,49 @@ body {
     display: inline-block;
 }
 
-.main .inventario-div .hp-potion img {
+.main .inventario-div .hp-potion {
     position: absolute;
     width: 42px;
     height: 37px;
     top: 60px;
-
 }
 
-.main .inventario-div .hp-potion img:hover {
+.main .inventario-div .hp-potion:hover {
+    border: 2px solid orangered;
+}
+
+.main .inventario-div .mana-potion {
+    position: absolute;
+    width: 42px;
+    height: 37px;
+    top: 60px;
+    left: 69px;
+}
+
+.main .inventario-div .mana-potion:hover {
+    border: 2px solid orangered;
+}
+
+.main .inventario-div .super-hp-potion {
+    position: absolute;
+    width: 42px;
+    height: 37px;
+    top: 60px;
+    left: 123px;
+}
+
+.main .inventario-div .super-hp-potion:hover {
+    border: 2px solid orangered;
+}
+
+.main .inventario-div .super-mana-potion {
+    position: absolute;
+    width: 42px;
+    height: 37px;
+    top: 113px;
+}
+
+.main .inventario-div .super-mana-potion:hover {
     border: 2px solid orangered;
 }
 
@@ -454,4 +529,34 @@ body {
     background-color: sienna;
     border-radius: 4px;
     border: 1px solid rosybrown;
+}
+
+.footer .copy {
+    font-size: 14px;
+    background-color: grey;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    border: 1px solid;
+}
+
+.footer .contact {
+    font-size: 14px;
+    background-color: grey;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    border: 1px solid;
+}
+
+@-webkit-keyframes animate-stripes {
+    100% {
+        background-position: -100px 0px;
+    }
+}
+
+@keyframes animate-stripes {
+    100% {
+        background-position: -100px 0px;
+    }
 }
