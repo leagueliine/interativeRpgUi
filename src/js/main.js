@@ -14,6 +14,7 @@ let iconLevels = document.getElementById('iconLevels');
 let levels = document.getElementById('divLevels');
 
 
+
 // backpack script
 iconBackpack.addEventListener('click', () => {
     if(inventario.classList.length > 1){
