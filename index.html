@@ -18,12 +18,13 @@
         <main class="main">
                 <div class="card">
                     <div class="div-info-header">
-                        <h2 class="nome">Luiz Eduardo</h2>
+                        <h2 class="nome">Jogador 1</h2>
                         <div class="div-lvl">
-                        <h2 class="idade"> Lvl 99</h2>
+                            <h2 class="lvl">Level</h2>
+                        <h2 id="levelChar" class="num-level">1</h2>
                     </div>
                     <div class="div-classe">
-                        <h3 class="classe">Supreme Warlord</h3>
+                        <h3 id="classeChar" class="classe">New Bie</h3>
                         <img src="src/img/crown.png" alt="Icon Classe">
                     </div>
                     </div>
@@ -31,6 +32,10 @@
 
                     <div class="div-boneco-perfil">
                         <img id="char" class="char " src="src/img/person.gif" alt="imagem de perfil">
+                        <!-- <img id="charEv1" class="char-evo-1" src="src/img/personevo1.gif" alt="personagem com evolução 1">
+                         -->
+
+                        <img id="spellCritico" class="buff-char" src="src/img/chifres-de-rena.png" alt="icone buff">
                     </div>
                     <div class="icons">
                         <a  href="#"><img id="iconBackpack" title="backpack" class="backpack" src="src/img/backpack.png  " alt="icon backpack"></a>
@@ -40,10 +45,13 @@
                         <div class="status-div">
                             <progress id="hpBar" class="hp" value="90" max="200"></progress>
                             <progress id="manaBar" class="mp" id="file" value="75" max="200"></progress>
+                            <progress id="barraEvolucao" class="barra-evolucao" value="0" max="3"></progress>
                         </div>
                         <div class="nome-status-div">
                         <h2 class="h2hp">HP</h2>
                         <h2 class="h2mp">MP</h2>
+                        <h3 class="titulo-evolucao">Iluminação</h3>
+
                         </div>
                     </div>
                     <div class="div-abas">
@@ -61,9 +69,33 @@
                             <h2 class="titulo-spells">SKILLS</h2>
                             <img class="icon-spells" src="src/img/chapeu-de-bruxa.png" alt="icone skills">
                             <a  id="passosNoturnos" href="#"> <img title="passos noturnos" class="invisibilidade" src="src/img/invisibility.png" alt="habilidade de invisibilidade"></a>
+                            <a id="buffCritico" href="#"><img class="buff-critico" src="src/img/atributo.png" alt="icone buff de critico"></a>
                         </div>
 
                         <div id="divLevels" class="div-levels">
+                            <h2 class="titulo-levels">LEVELS</h2>
+                            <div class="div-levels-progress">
+                                <progress title="level 89" class="progress-ataque" value="80" max="100"></progress>
+                                <progress title="level 95" class="progress-forca" value="64" max="100"></progress>
+                                <progress title="level 80" class="progress-def" value="94" max="100"></progress>
+                                <progress title="level 30" class="progress-sorte" value="34" max="100"></progress>
+                                <progress title="level 54" class="progress-agilidade" value="70" max="100"></progress>
+
+                               
+
+                                <div class="div-levels-nomes">
+                                    <h3 class="titulo-ataque">Ataque</h3>
+                                    <h3 class="titulo-forca">Forca</h3>
+                                    <h3 class="titulo-defesa">defesa</h3>
+                                    <h3 class="titulo-sorte">Sorte</h3>
+                                    <h3 class="titulo-agilidade">Agilidade</h3>
+                                </div>
+
+                              
+
+                            </div>
+                          
+
 
                         </div>
 
@@ -96,7 +128,12 @@
         <p class="copy">Luiz@Eduardo Dev/Front-end</p>
             <p class="contact">Contact: +55(048)98413-3784</p>
     </footer>
+   <a id="imgGoblin" href="#"><img  class="inimigo-goblin" src="src/img/goblin gif.gif" alt=""></a> 
+    <script src="src/js/backpack.js"></script>
+    <script src="src/js/levels.js"></script>
+    <script src="src/js/combate.js"></script>
 
-    <script src="src/js/main.js"></script>
+
+
 </body>
 </html>

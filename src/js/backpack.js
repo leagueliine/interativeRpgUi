@@ -6,14 +6,12 @@ let superHp = document.getElementById('superHpPotion');
 let manaPotion = document.getElementById('manaPotion');
 let hpBar = document.getElementById('hpBar');
 let manaBar = document.getElementById('manaBar');
-let spellPassosNoturnos = document.getElementById('passosNoturnos');
 let char = document.getElementById('char');
 let iconSpells = document.getElementById('iconSpells');
 let spells = document.getElementById('divSpells');
-let iconLevels = document.getElementById('iconLevels');
-let levels = document.getElementById('divLevels');
-
-
+let spellSorte = document.getElementById('spellCritico');
+let spellPassosNoturnos = document.getElementById('passosNoturnos');
+let btnSpellSorte = document.getElementById('buffCritico');
 
 // backpack script
 iconBackpack.addEventListener('click', () => {
@@ -45,32 +43,33 @@ superMana.addEventListener('click', () => {
     superMana.classList.add('potion-consumed');
 }); 
 
-
-
-
-// spells script
+// levels spells
 iconSpells.addEventListener('click', () => {
     if(spells.classList.length > 1){
         spells.classList.remove('open');
     }else {
         spells.classList.add('open');
     };
-});
-
-spellPassosNoturnos.addEventListener('click', () => {
+  });
+  
+  spellPassosNoturnos.addEventListener('click', () => {
     if(char.classList.length > 1){
         char.classList.remove('active');
     }else{
         char.classList.add('active');
     };
-});
-
-// levels script
-iconLevels.addEventListener('click', () => {
-    if(levels.classList.length > 1){
-        levels.classList.remove('open')
+  });
+  
+  btnSpellSorte.addEventListener('click', () => {
+    if(spellSorte.classList.length > 1){
+        spellSorte.classList.remove('ativo');
     }else{
-        levels.classList.add('open');
+        spellSorte.classList.add('ativo');
     };
-});
+  });
+  
+
+
+
+
 

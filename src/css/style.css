@@ -17,7 +17,16 @@ body {
     background-size: cover;
     width: 100vh;
     height: 100vh;
+}
 
+body .inimigo-goblin {
+    position: relative;
+    bottom: -401px;
+    left: 582px;
+}
+
+body .inimigo-goblin:hover {
+    cursor: crosshair;
 }
 
 .div-main {
@@ -34,7 +43,7 @@ body {
     width: 80%;
     height: 100%;
     left: 122px;
-    top: 65px;
+    top: -21px;
 }
 
 .card {
@@ -49,6 +58,22 @@ body {
     padding: 15px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+.card .div-info-header {
+    display: flex;
+}
+
+.card .div-info-header .lvl {
+    position: absolute;
+    color: chartreuse;
+    left: 197px;
+}
+
+.card .div-info-header .num-level {
+    color: chartreuse;
+    border-radius: 20px;
+    background-color: black;
 }
 
 .div-info-header {
@@ -72,7 +97,7 @@ body {
     bottom: 1px;
 }
 
-.div-boneco-perfil img {
+.div-boneco-perfil .char {
     position: absolute;
     width: 260px;
     top: 71px;
@@ -80,11 +105,21 @@ body {
     transition: 0.6s ease-in-out;
 }
 
-.main .card .div-lvl {
-    background-color: darkblue;
-    border-radius: 25px;
-    color: blueviolet;
+.main .div-boneco-perfil .buff-char {
+    position: absolute;
+    width: 55px;
+    top: 90px;
+    left: 142px;
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+
 }
+
+.main .div-boneco-perfil .buff-char.ativo {
+    opacity: 0.7;
+}
+
+.main .card .div-lvl {}
 
 .main .icons {
     position: relative;
@@ -345,6 +380,20 @@ body {
     border: 2px solid orangered;
 }
 
+.main .spells-div .buff-critico {
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    top: 39px;
+    left: 105px;
+    opacity: 0.9;
+}
+
+.main .spells-div .buff-critico:hover {
+    border: 2px solid orangered;
+}
+
+
 .div-boneco-perfil .char.active {
     opacity: 0.2;
 }
@@ -354,7 +403,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
-    position: absolute;
+    position: relative;
     width: 247px;
     height: 250px;
     border-radius: 12px;
@@ -549,14 +598,116 @@ body {
     border: 1px solid;
 }
 
-@-webkit-keyframes animate-stripes {
-    100% {
-        background-position: -100px 0px;
-    }
+.main .div-levels .titulo-levels {
+    position: absolute;
+    top: 14px;
+    left: 86px;
+    color: red;
 }
 
-@keyframes animate-stripes {
-    100% {
-        background-position: -100px 0px;
-    }
+.main .div-levels .div-levels-progress {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.main .div-levels .div-levels-progress .progress-ataque {
+    position: absolute;
+    top: 27px;
+    left: 80px;
+    width: 100px;
+    height: 20px;
+}
+
+.main .div-levels .div-levels-progress .progress-forca {
+    position: absolute;
+    top: 57px;
+    left: 80px;
+    width: 100px;
+    height: 20px;
+}
+
+.main .div-levels .div-levels-progress .progress-def {
+    position: absolute;
+    top: 87px;
+    left: 80px;
+    width: 100px;
+    height: 20px;
+}
+
+.main .div-levels .div-levels-progress .progress-sorte {
+    position: absolute;
+    top: 117px;
+    left: 80px;
+    width: 100px;
+    height: 20px;
+}
+
+.main .div-levels .div-levels-progress .progress-agilidade {
+    position: absolute;
+    top: 147px;
+    left: 80px;
+    width: 100px;
+    height: 20px;
+}
+
+
+.main .status-div .barra-evolucao {
+    position: absolute;
+    top: 90px;
+    left: 80px;
+    width: 145px;
+    height: 20px;
+}
+
+
+
+.main .div-levels .div-levels-nomes .titulo-ataque {
+    color: aqua;
+    font-size: 12px;
+    position: absolute;
+    top: 30px;
+    left: 2px;
+}
+
+.main .div-levels .div-levels-nomes .titulo-forca {
+    color: aqua;
+    font-size: 12px;
+    position: absolute;
+    top: 60px;
+    left: 2px;
+}
+
+.main .div-levels .div-levels-nomes .titulo-defesa {
+    color: aqua;
+    font-size: 12px;
+    position: absolute;
+    top: 90px;
+    left: 2px;
+}
+
+.main .div-levels .div-levels-nomes .titulo-sorte {
+    color: aqua;
+    font-size: 12px;
+    position: absolute;
+    top: 120px;
+    left: 2px;
+}
+
+.main .div-levels .div-levels-nomes .titulo-agilidade {
+    color: aqua;
+    font-size: 12px;
+    position: absolute;
+    top: 150px;
+    left: 2px;
+}
+
+
+.main .nome-status-div .titulo-evolucao {
+    color: chartreuse;
+    font-size: 12px;
+    position: absolute;
+    top: 60px;
+    left: 17px;
 }
