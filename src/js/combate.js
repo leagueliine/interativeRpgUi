@@ -2,7 +2,7 @@ let goblinInimigo = document.getElementById('imgGoblin');
 let expBar = document.getElementById('barraEvolucao');
 let classeChar = document.getElementById('classeChar');
 let levelChar = document.getElementById('levelChar');
-let arrClasse = ['Súdito', 'Lord', 'King', 'Lord King', 'God', 'God King'];
+let arrClasse = ['Súdito','soldado', 'Lord', 'King', 'Lord King', 'God', 'God King'];
 
 
 

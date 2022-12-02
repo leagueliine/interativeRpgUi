@@ -26,7 +26,7 @@ body .inimigo-goblin {
 }
 
 body .inimigo-goblin:hover {
-    cursor: crosshair;
+    cursor: url("../img/cursor.cur"), crosshair;
 }
 
 .div-main {
@@ -273,6 +273,11 @@ body .inimigo-goblin:hover {
 
 .main .inventario-div.open {
     display: inline-block;
+}
+
+.main .inventario-div .div-potions {
+    height: 200%;
+    overflow-wrap: break-word;
 }
 
 .main .inventario-div .hp-potion {
@@ -582,8 +587,8 @@ body .inimigo-goblin:hover {
     font-size: 14px;
     background-color: grey;
     position: absolute;
-    bottom: 0px;
-    left: 20px;
+    bottom: 20px;
+    right: 28px;
     border: 1px solid;
 }
 

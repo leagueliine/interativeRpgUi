@@ -14,6 +14,13 @@ let spellPassosNoturnos = document.getElementById('passosNoturnos');
 let btnSpellSorte = document.getElementById('buffCritico');
 
 // backpack script
+
+
+setInterval(() => {
+    hpBar.value -= 3;
+}, 3800);
+
+
 iconBackpack.addEventListener('click', () => {
     if(inventario.classList.length > 1){
         inventario.classList.remove('open');
